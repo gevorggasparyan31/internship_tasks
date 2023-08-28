@@ -50,8 +50,8 @@ function stringCombinations(text) {
         let char = text.charAt(i);
         let arrTemp = [char];
 
-        for (let x in combinations) {
-            arrTemp.push("" + combinations[x] + char);
+        for (let x of combinations) {
+            arrTemp.push("" + x + char);
         }
         combinations = combinations.concat(arrTemp);
         i++;
@@ -59,6 +59,8 @@ function stringCombinations(text) {
     
     return combinations;
 }
+
+console.log(stringCombinations("dog"));
 
 /**
  * TASK 4
@@ -187,4 +189,3 @@ let identityMatrix = [];
     return identityMatrix;
 }
 
-console.log(makeIdentityMatrix(3));
