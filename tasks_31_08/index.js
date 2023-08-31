@@ -63,7 +63,7 @@ function everyNthElement (arr, n) {
         }
         return result;
     },[]);
-   
+
 }
 
 // console.log(everyNthElement([1,2,3,4,5,6,7,8,9],3));
@@ -95,3 +95,20 @@ function groupFilter (array, filter) {
 //
 // console.log("True values: "+groupFilter(arr,filter));
 
+//66 to do
+
+//50
+function integerToMerridie (hours,minutes) {
+    const meridiem = (hours > 12) ? 'PM' : 'AM';
+    const formatedMinutes = (minutes < 10) ? '0' + minutes: minutes;
+
+    if (hours >= 11 && hours <= 23 && minutes >=0 && minutes <= 59){
+        const formatedHours = (hours % 12 === 0) ? hours : hours % 12;
+
+        return formatedHours+":"+formatedMinutes+" "+meridiem;
+    } else {
+        return hours+":"+formatedMinutes+" "+meridiem;
+    }
+}
+
+console.log(integerToMerridie(19,35));
