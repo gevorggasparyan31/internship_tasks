@@ -106,14 +106,14 @@ function groupFilter (array, filter) {
  */
 function integerToMerridie (hours,minutes) {
     const meridiem = (hours > 12) ? 'PM' : 'AM';
-    const formatedMinutes = (minutes < 10) ? '0' + minutes: minutes;
+    const formattedMinutes = (minutes < 10) ? '0' + minutes: minutes;
 
     if (hours >= 11 && hours <= 23 && minutes >=0 && minutes <= 59){
-        const formatedHours = (hours % 12 === 0) ? hours : hours % 12;
+        const formattedHours = (hours % 12 === 0) ? hours : hours % 12;
 
-        return formatedHours+":"+formatedMinutes+" "+meridiem;
+        return formattedHours+":"+formattedMinutes+" "+meridiem;
     } else {
-        return hours+":"+formatedMinutes+" "+meridiem;
+        return hours+":"+formattedMinutes+" "+meridiem;
     }
 }
 
