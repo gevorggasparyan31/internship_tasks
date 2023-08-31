@@ -97,7 +97,13 @@ function groupFilter (array, filter) {
 
 //66 to do
 
-//50
+/**
+ * TASK 50
+ *
+ * @param hours
+ * @param minutes
+ * @returns {string} - String of concatenated hours,minutes and meridiem
+ */
 function integerToMerridie (hours,minutes) {
     const meridiem = (hours > 12) ? 'PM' : 'AM';
     const formatedMinutes = (minutes < 10) ? '0' + minutes: minutes;
