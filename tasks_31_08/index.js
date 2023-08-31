@@ -63,13 +63,7 @@ function everyNthElement (arr, n) {
         }
         return result;
     },[]);
-
-    //with for
-    // const result = [];
-    // for (let i = 0; i < arr.length; i+=n) {
-    //     result.push(arr[i]);
-    // }
-    // return result;
+   
 }
 
 // console.log(everyNthElement([1,2,3,4,5,6,7,8,9],3));
