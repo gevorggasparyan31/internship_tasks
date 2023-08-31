@@ -73,3 +73,31 @@ function everyNthElement (arr, n) {
 }
 
 // console.log(everyNthElement([1,2,3,4,5,6,7,8,9],3));
+
+/**
+ * TASK 17
+ *
+ * @param {[]} array - array of random elements
+ * @param {[]} filter - array of boolean value elements
+ * @returns {*[][]} - 2 arrays of groups
+ */
+function groupFilter (array, filter) {
+    let group1 = [];
+    let group2 = [];
+
+    for (let i = 0; i < array.length; i++) {
+        if(filter[i]) {
+            group1.push(array[i]);
+        } else {
+            group2.push(array[i]);
+        }
+    }
+
+    return [group1,group2];
+}
+
+// let arr = [1,2,3,4,5,6];
+// let filter = [true,false,false,true,false,true];
+//
+// console.log("True values: "+groupFilter(arr,filter));
+
