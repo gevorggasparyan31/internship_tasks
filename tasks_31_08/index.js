@@ -95,7 +95,6 @@ function groupFilter (array, filter) {
 //
 // console.log("True values: "+groupFilter(arr,filter));
 
-//66 to do
 
 /**
  * TASK 50
@@ -117,4 +116,75 @@ function integerToMerridie (hours,minutes) {
     }
 }
 
-console.log(integerToMerridie(19,35));
+// console.log(integerToMerridie(19,35));
+
+/**
+ * TASK 48
+ * 
+ * @param {*} obj - Object parameter where function must look for function properties
+ * @param {Boolean} inherited - parameter in default is false
+ * @returns 
+ */
+function getFunctionPropertyNames(obj, inherited = false) {
+    let propertyNames = Object.keys(obj);
+  
+    if (inherited) {
+      let prototype = Object.getPrototypeOf(obj);
+      while (prototype) {
+        propertyNames = propertyNames.concat(Object.keys(prototype));
+        prototype = Object.getPrototypeOf(prototype);
+      }
+    }
+  
+    const functionPropertyNames = propertyNames.filter((propertyName) => {
+      const property = obj[propertyName];
+      return typeof property === 'function';
+    });
+  
+    return functionPropertyNames;
+  }
+  
+//   const myObject = {
+//     a: 1,
+//     b: function() {
+//       console.log('Function b');
+//     },
+//     c: function() {
+//       console.log('Function c');
+//     },
+//   };
+  
+//   const inheritedObject = Object.create(myObject);
+//   inheritedObject.d = function() {
+//     console.log('Function d');
+//   };
+  
+//   const result = getFunctionPropertyNames(inheritedObject, true);
+//   console.log(result);
+  
+/**
+ * TASK 73
+ * 
+ * @param {*} a - first array
+ * @param {*} b - second array
+ * @param {*} fn - function that must be applied to a and b
+ * @returns 
+ */
+function differenceWithFn(a, b, fn) {
+    const bSet = new Set(b.map(fn));
+  
+    const aMapped = a.map(fn);
+  
+    const diff = aMapped.filter(item => !bSet.has(item));
+  
+    return diff;
+  }
+  
+//   const array1 = [1, 2, 3, 4, 5];
+//   const array2 = [2, 4, 6, 8, 10];
+  
+//   const square = x => x * x;
+  
+//   const result = differenceWithFn(array1, array2, square);
+//   console.log(result);
+  
