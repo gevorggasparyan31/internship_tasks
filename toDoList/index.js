@@ -12,7 +12,7 @@ class toDoList {
         const index = this._tasks.indexOf(task);
         if(index !== -1) {
             this._tasks.splice(index,1);
-            console.log(`"${task}" removed`)
+            console.log(`"${task}" removed from list`)
         } else {
             console.log(`"${task}" not found`)
         }
