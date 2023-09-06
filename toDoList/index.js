@@ -30,6 +30,5 @@ let todo = new toDoList();
 
 todo.addTask("Make todo list app");
 todo.addTask("Git add the todo list app");
-todo.addTask("Git push the app to github");
 
 todo.showTasks();
