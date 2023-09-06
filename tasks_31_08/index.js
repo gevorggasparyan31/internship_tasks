@@ -143,7 +143,7 @@ function getFunctionPropertyNames(obj, inherited = false) {
   
     return functionPropertyNames;
   }
-  
+
 //   const myObject = {
 //     a: 1,
 //     b: function() {
